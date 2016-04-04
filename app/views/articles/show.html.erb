@@ -13,7 +13,7 @@
 <%= link_to 'Back', articles_path %>
 
 
-<% @article.comments.each do |comment| %>
+<% @article.comments.where(visible: true).each do |comment| %>
     <p>Autorius: <%= comment.name %></p>
     <p><%= comment.content %></p>
     <hr>

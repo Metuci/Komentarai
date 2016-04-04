@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160404165026) do
+ActiveRecord::Schema.define(version: 20160404171659) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -57,8 +57,9 @@ ActiveRecord::Schema.define(version: 20160404165026) do
     t.string   "name"
     t.text     "content"
     t.integer  "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "visible",    default: false
   end
 
 end
