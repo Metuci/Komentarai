@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  resources :articles
+  resources :articles, only: [:index, :show]
   get 'home' => 'static_pages#home'
   get 'about' => 'static_pages#about'
   post 'articles/:id/comments' => 'comments#create', as: :article_comments
