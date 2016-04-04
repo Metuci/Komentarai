@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :articles
   get 'home' => 'static_pages#home'
   get 'about' => 'static_pages#about'
+  post 'articles/:id/comments' => 'comments#create', as: :article_comments
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
