@@ -7,11 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1>Laikraštuko komentarai</h1>
 
-<%= yield %>
+<div id="content">
+  <%= image_tag "circles_l.png", id: "page_circles_r" %>
+  <%= image_tag "title.png", id: "page_title"%>
+  <%= image_tag "circles_r.png", id: "page_circles_l" %>
+  
+  <%= yield %>
 
-<p>Meilė 2016</p>
+  <%= image_tag "bottom", id: "page_bottom" %>
+</div>
+
+<p id="footer">Meilė 2016</p>
 <% console %>
 </body>
 </html>

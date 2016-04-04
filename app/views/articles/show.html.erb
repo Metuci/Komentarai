@@ -1,12 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+<h2 class="article_title">  <%= @article.title %> </h2>
 
 <p>
-  <strong>Content:</strong>
   <%= @article.content %>
 </p>
 
@@ -35,5 +31,3 @@
     <%= f.submit %>
   </div>
 <% end %>
-
-

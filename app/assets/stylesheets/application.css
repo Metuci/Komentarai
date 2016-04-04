@@ -12,3 +12,46 @@
  *
  *= require_self
  */
+
+#content {
+  position: relative;
+  margin: 20px;
+  border-width: 0 2px 2px 2px;
+  border-style: solid;
+  padding: 20px;
+}
+
+#page_title {
+  display: block;
+  margin: -40px auto 20px auto;
+  height: 24px;
+}
+
+#page_circles_l {
+  height: 24px;
+  position: absolute;
+  top: -15px;
+  right: -5px;
+}
+
+#page_circles_r {
+  height: 24px;
+  position: absolute;
+  top: -15px;
+  left: -5px;
+}
+
+#page_bottom {
+  display: block;
+  margin: 20px auto -35px auto;
+  height: 40px;
+  background-color: white;
+}
+
+#footer {
+  text-align: center;
+}
+
+.article_title {
+  text-align: center;
+}
