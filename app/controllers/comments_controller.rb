@@ -9,10 +9,10 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @article, notice: 'Comment was successfully created.' }
+        format.html { redirect_to @article, notice: 'Komentaras sukurtas, atsiras greitu metu :)' }
         format.json { render :show, status: :created, location: @comment }
       else
-        format.html { redirect_to root_url, notice: 'Comment was not created, it was a big fail.' }
+        format.html { redirect_to root_url, notice: 'Komentaro sukurti nepavyko. Gal dėl to, kad nėra ką kurti?' }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end

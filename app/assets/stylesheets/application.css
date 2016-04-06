@@ -14,8 +14,9 @@
  */
 
 #content {
+  max-width: 800px;
   position: relative;
-  margin: 20px;
+  margin: 20px auto;
   border-width: 0 2px 2px 2px;
   border-style: solid;
   padding: 20px;
@@ -54,4 +55,11 @@
 
 .article_title {
   text-align: center;
+}
+
+.comment-container {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #FA6;
+  padding: 10px;
 }

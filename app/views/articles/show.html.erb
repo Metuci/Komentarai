@@ -1,33 +1,37 @@
 <p id="notice"><%= notice %></p>
 
+
+<%= link_to 'Atgal', articles_path %>
+
 <h2 class="article_title">  <%= @article.title %> </h2>
 
 <p>
   <%= @article.content %>
 </p>
 
-<%= link_to 'Back', articles_path %>
+<div class="comment-container">
+  <h3>Komentarai</h3>
+
+  <% @article.comments.where(visible: true).each do |comment| %>
+      <b><p><%= comment.name %>:</p></b>
+      <p><%= comment.content %></p>
+      <hr>
+  <% end %>
 
 
-<% @article.comments.where(visible: true).each do |comment| %>
-    <p>Autorius: <%= comment.name %></p>
-    <p><%= comment.content %></p>
-    <hr>
-<% end %>
 
+  <%= form_for [@article, Comment.new] do |f| %>
 
-
-<%= form_for [@article, Comment.new] do |f| %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+    <div class="field">
+      <%= f.label 'Vardas:' %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label 'Tekstas:' %><br>
+      <%= f.text_area :content %>
+    </div>
+    <div class="actions">
+      <%= f.submit 'Komentuok!' %>
+    </div>
+  <% end %>
+</div>
