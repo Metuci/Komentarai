@@ -25,7 +25,7 @@
 #page_title {
   display: block;
   margin: -40px auto 20px auto;
-  height: 24px;
+  width: 80%;
 }
 
 #page_circles_l {
@@ -70,4 +70,14 @@ a {
 
 a:visited {
   color: #C95;
+}
+
+textarea {
+  width: 100%;
+
+  resize: vertical;
+
+  height: 80px;
+  min-height: 80px;
+  box-sizing: border-box;
 }
