@@ -1,11 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 
-<h2 class="article_title">  <%= @article.title %> </h2>
+<h1 class="article_title">  <%= @article.title %> </h1>
 
-<p>
-  <%= @article.content %>
-</p>
+<% markdown = new_markdown %>
+<div class="article-content">
+  <%== markdown.render @article.content %>
+</div>
 
 <div class="comment-container">
   <h3>Komentarai</h3>

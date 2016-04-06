@@ -2,10 +2,11 @@
 
 <h1>Turinys</h1>
 
+<% markdown = new_markdown %>
 <% @articles.each do |article| %>
 
       <h4><%= link_to article.title, article %></h4>
-      <p><%= truncate article.content, length: 300 %></p>
+      <div><%== markdown.render(truncate article.content, length: 300) %></div>
 
       
     <hr>

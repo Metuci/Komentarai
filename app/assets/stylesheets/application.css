@@ -81,3 +81,7 @@ textarea {
   min-height: 80px;
   box-sizing: border-box;
 }
+
+.article-content p {
+  text-indent: 30px;
+}
