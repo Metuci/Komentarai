@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>NewsComments</title>
+  <title>Reliatyvios žinios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -15,10 +16,14 @@
   
   <%= yield %>
 
-  <%= image_tag "bottom", id: "page_bottom" %>
+  <%= image_tag "bottom.png", id: "page_bottom" %>
 </div>
 
 <p id="footer">Oranžiniai 2016</p>
-<% console %>
+
+<% if Rails.env == "development" %>
+  <% console %>
+<% end %>
+
 </body>
 </html>
