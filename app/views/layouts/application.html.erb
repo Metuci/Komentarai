@@ -19,6 +19,10 @@
 </div>
 
 <p id="footer">Meilė 2016</p>
-<% console %>
+
+<% if Rails.env == "development" %>
+  <% console %>
+<% end %>
+
 </body>
 </html>
