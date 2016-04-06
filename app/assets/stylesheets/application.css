@@ -63,3 +63,11 @@
   border-color: #FA6;
   padding: 10px;
 }
+
+a {
+  color: #FA6;
+}
+
+a:visited {
+  color: #C95;
+}
